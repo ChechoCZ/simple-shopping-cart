@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+  
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html" id="navTitle"></a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <div class="form-inline text-center">
+      <div class="form-group">        
+        <input type="text" class="form-control" id="description" placeholder="Description">
+      </div>
+      <div class="form-group">        
+        <input type="text" class="form-control" id="amount" placeholder="Amount">
+      </div>
+      <div class="form-group">        
+        <input type="text" class="form-control" id="value" placeholder="Value">
+      </div>
+      <span id="btnUpdate" style="display: none;">
+        <span id="inputIDUpdate"></span>
+        <button class="btn btn-default" onclick="updateData()">Save</button>
+        <button class="btn btn-default" onclick="resetForm()">Cancel</button>
+      </span>
+      <span id="btnAdd">
+        <button class="btn btn-default" onclick="addData()">Add</button>
+        <button class="btn btn-default" onclick="resetForm()">Reset</button>
+        <button class="btn btn-default" onclick="deleteList()">Delete List</button>
+      </span>
+    </div>
+
+    <div id="errors" style="display: none; margin-top: 15px;"></div>
+
+    <hr>
+
+    <table class="table" id="listTable"></table>
+
+  </div>
+
+  <nav class="navbar navbar-default navbar-fixed-bottom">
+      <div class="container">
+        <h4 class="text-center">Total: <span id="totalValue">$ 0,00</span></h4>
+      </div>
+    </nav>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  
+</body>
+</html>
